@@ -11,6 +11,11 @@ df1 = pd.read_csv('roller_coasters.csv')
 df2 = pd.read_csv('Golden_Ticket_Award_Winners_Steel.csv')
 df3 = pd.read_csv('Golden_Ticket_Award_Winners_Steel.csv')
 
+# image
+from PIL import Image
+image = Image.open('regression1.jpg')
+
+st.image(image, caption='Sunrise by the mountains')
 
 st.subheader('Steel Roller Coasters who won the Golden Ticket Award')
 # points filter
