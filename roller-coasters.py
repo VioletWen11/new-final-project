@@ -11,12 +11,24 @@ df1 = pd.read_csv('roller_coasters.csv')
 df2 = pd.read_csv('Golden_Ticket_Award_Winners_Steel.csv')
 df3 = pd.read_csv('Golden_Ticket_Award_Winners_Steel.csv')
 
-# image
+# Part 3: regression analysis
+st.subheader('Part 3: linear regression analysis')
+st.write('We use Excel to find the correlation of speed and height')
 from PIL import Image
 image = Image.open('regression1.jpg')
-
 st.image(image, caption='Sunrise by the mountains')
+st.write('Since the P value is small, the model is doable')
 
+image = Image.open('regression2.jpg')
+st.image(image, caption='Sunrise by the mountains')
+st.write('y = height, x = speed')
+st.write('We delete two extreme values(height = 902)')
+image = Image.open('regression3.jpg')
+st.image(image, caption='Sunrise by the mountains')
+st.write('When we select the data of high ranking roller coasters, we find the regression is dramatic.')
+
+# Part 4: Popularity
+st.subheader('Part 4: Popularity')
 st.subheader('Steel Roller Coasters who won the Golden Ticket Award')
 # points filter
 points_filter = st.slider('The minimal points:', 0, 1400, 59)
